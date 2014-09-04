@@ -1,0 +1,27 @@
+{
+  "name": "angular_blog",
+  "version": "0.0.0",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "AngularJS"
+  ],
+  "authors": [
+    "Brendan Quinn <quinn.197@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation": "~5.4.3",
+    "angular": "~1.2.23",
+    "angular-route": "~1.2.23",
+    "jquery": "~2.1.1"
+  }
+}

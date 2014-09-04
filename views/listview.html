@@ -1,0 +1,13 @@
+<button ng-click=toHome()>Home</button>
+<button ng-click=createPost()>Create Post</button>
+<ul id="theList">
+  <li ng-repeat="post in posts" ng-class-odd="'odd'" ng-class-even="'even'">
+    <span><a href="">{{post.title}}</a></span> by <span style="color: darkgrey">{{post.author}}</span>
+    <p ng-hide="poop" >{{post.content}}</p>
+    <div ng-hide="poop"><button class="button alert" ng-click="poop = !poop"><a href="">Edit</a></button></div>
+    <form ng-hide="!poop" action="">
+      <input type="text" ng-model="post.content" value="post.content">
+      <input type="submit" ng-click="editPost(post, post.content); poop = !poop">
+    </form>
+  </li>
+</ul>

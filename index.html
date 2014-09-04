@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="bower_components/foundation/css/foundation.css">
+  <link rel="stylesheet" href="styles/main.css">
+
+</head>
+<body ng-app="blog-modules">
+
+  <div class="off-canvas-wrap" data-offcanvas>
+  <div class="inner-wrap">
+    <div class="blackTop">
+      <a class="left-off-canvas-toggle navA" href="" >Hamburger</a>
+    </div>
+
+    <!-- Off Canvas Menu -->
+    <aside class="left-off-canvas-menu">
+        <!-- whatever you want goes here -->
+        <p class="sideMenuTag"><a href="#/">Home</a></p>
+        <p class="sideMenuTag"><a href="#/listview">List View</a></p>
+        <div id="posts" class="sideMenuGroup">
+          Posts
+          <br/>
+          <ul ng-controller="MainController">
+            <li ng-repeat="post in posts">
+              <a href="#"> {{ post.title }} </a><button><a href="">edit</a></button></li>
+          </ul>
+        </div>
+    </aside>
+
+    <!-- main content goes here -->
+    <div ng-view="" class="container"></div>
+
+  <!-- close the off-canvas menu -->
+  <a class="exit-off-canvas"></a>
+
+  </div>
+</div>
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/fastclick/lib/fastclick.js"></script>
+  <script src="bower_components/angular/angular.min.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/foundation/js/foundation.min.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/services/postsService.js"></script>
+  <script src="js/controllers/homeController.js"></script>
+  <script src="js/controllers/postsController.js"></script>
+  <script src="js/controllers/listviewController.js"></script>
+  <script src="js/controllers/listviewController.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

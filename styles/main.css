@@ -1,0 +1,55 @@
+.container {
+  display: block;
+  height: 600px;
+  overflow-y: scroll; }
+
+.blackTop {
+  background-color: #333333;
+  display: block;
+  padding: 10px; }
+  .blackTop .navA {
+    font-size: 1.5em;
+    margin: 10px 20px 10px 0px; }
+
+.left-off-canvas-menu .sideMenuTag {
+  margin: 0;
+  padding: 5px 5px;
+  color: #999999;
+  background-color: #444444;
+  border-bottom: 2px solid #333333; }
+.left-off-canvas-menu .sideMenuGroup {
+  width: 98%;
+  margin: 2px;
+  padding: 5px 5px;
+  color: #999999;
+  background-color: #444444;
+  border: 2px solid #008CBA; }
+.left-off-canvas-menu #posts ul li button {
+  background-color: lightgrey;
+  padding: 5px;
+  margin-left: 10px;
+  margin-bottom: 0;
+  border-radius: 5px; }
+  .left-off-canvas-menu #posts ul li button a {
+    font-size: 12px; }
+
+#theList {
+  margin: 0; }
+  #theList li {
+    padding: 5px 10px;
+    list-style-type: none; }
+    #theList li p {
+      margin-bottom: 0; }
+    #theList li div {
+      text-align: right; }
+      #theList li div button {
+        padding: 5px 10px;
+        margin: 5px;
+        border-radius: 2px;
+        border-bottom: 2px solid darkgrey;
+        border-right: 2px solid darkgrey; }
+        #theList li div button a {
+          font-size: 14px;
+          color: white; }
+  #theList .odd {
+    background-color: lightgrey; }
