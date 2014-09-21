@@ -8,6 +8,6 @@ angular.module("blog-modules")
     {title: "Blog 4", author: "Bradder", content: "Lorem ipsum dolor sit amet"}
     ]
     $scope.goToBlog = function () {
-      $location.path("/list view");
+      $location.path("/listview");
     };
   });

@@ -20,6 +20,7 @@ angular.module("blog-modules")
       console.log(newb.content);
 
       postDataSvc.putData(newb);
+      $location.path("/listview");
       //$scope.posts.push(newb);
       console.log($scope.posts);
 
