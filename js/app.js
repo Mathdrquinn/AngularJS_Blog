@@ -1,4 +1,4 @@
-angular.module("blog-modules", ["blog-modules.controllers","ngRoute"])
+angular.module("blog-modules", ["ngRoute"])
   .config(function($routeProvider) {
     $routeProvider
       .when("/",
@@ -23,8 +23,6 @@ angular.module("blog-modules", ["blog-modules.controllers","ngRoute"])
         redirectTo: "/notFound"
       });
   });
-angular.module("tiy-ng-modules.controllers", []);
-angular.module("tiy-ng-modules.services", []);
 
 function MainController($scope) {
 

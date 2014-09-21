@@ -1,14 +1,14 @@
 <button ng-click="toListView()">List View</button>
 <button ng-click=toHome()>Home</button>
 <h1>Let's Create</h1>
-<form action="" ng-hide="poop">
+<form action="" ng-submit="magic(newb.title, newb.author, newb.content)" ng-hide="poop">
   <input type="text" placeholder="Post Title" ng-model="newb.title">
   <input type="text" placeholder="author" ng-model="newb.author">
   <label for="box"> Content
     <textarea name="box" rows="10" cols="60" value="Begin..." ng-model="newb.content">Begin Typing...</textarea>
   </label>
   <button ng-click= "poop = !poop">Preview</button>
-  <input type="submit" ng-click="magic(newb.title, newb.author, newb.content)">
+  <input type="submit">
 </form>
 
 <div id="preview" ng-hide="!poop">

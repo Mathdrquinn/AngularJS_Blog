@@ -6,8 +6,10 @@
     <p ng-hide="poop" >{{post.content}}</p>
     <div ng-hide="poop"><button class="button alert" ng-click="poop = !poop"><a href="">Edit</a></button></div>
     <form ng-hide="!poop" action="">
-      <input type="text" ng-model="post.content" value="post.content">
-      <input type="submit" ng-click="editPost(post, post.content); poop = !poop">
+      <label for="box"> Content
+        <textarea name="box" rows="10" cols="60" value="post.content" ng-model="post.content"></textarea>
+      </label>
+      <input type="submit" ng-click="poop = !poop">
     </form>
   </li>
 </ul>

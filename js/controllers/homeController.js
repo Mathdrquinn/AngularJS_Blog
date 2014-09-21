@@ -1,5 +1,6 @@
-angular.module("blog-modules.controllers", [])
+angular.module("blog-modules")
 .controller("homeController", function($scope, $location) {
+
   $scope.hello = "Hello, Welcome to Blog Place. THE place for blogs.";
   $scope.notFound = "Sorry, wrong place";
 

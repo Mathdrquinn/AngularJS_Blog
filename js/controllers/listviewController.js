@@ -1,16 +1,8 @@
-angular.module("blog-modules.controllers")
+angular.module("blog-modules")
 
-  .controller("listviewController", function ($scope, $location) {
-    $scope.posts = [
-    {title: "Blog 1", author: "Brad", content: "Lorem ipsum dolor sit amet blah"},
-    {title: "Blog 2", author: "Bradly", content: "Lorem ipsum dolor sit amet blah blah"},
-    {title: "Blog 3", author: "Braditive", content: "Lorem ipsum dolor sit amet blah blah blah"},
-    {title: "Blog 4", author: "Bradder", content: "Lorem ipsum dolor sit amet"},
-    {title: "Blog 5", author: "Brad", content: "Lorem ipsum dolor sit amet blah"},
-    {title: "Blog 6", author: "Bradly", content: "Lorem ipsum dolor sit amet blah blah"},
-    {title: "Blog 7", author: "Braditive", content: "Lorem ipsum dolor sit amet blah blah blah"},
-    {title: "Blog 8", author: "Bradder", content: "Lorem ipsum dolor sit amet"}
-    ];
+  .controller("listviewController", function ($scope, $location, postDataSvc) {
+
+    $scope.posts = postDataSvc.getData();
 
     $scope.newPost = {title: "", author: "", content: ""};
     var newb = $scope.newPost;
@@ -27,10 +19,12 @@ angular.module("blog-modules.controllers")
       newb.content = content;
       console.log(newb.content);
 
-      $scope.posts.push(newb);
+      postDataSvc.putData(newb);
+      //$scope.posts.push(newb);
+      console.log($scope.posts);
 
       $scope.newPost = {title: "", author: "", content: ""};
-      newb = $scope.newPost;
+      newb = {};
     }
 
     $scope.editPost = function (post, content) {

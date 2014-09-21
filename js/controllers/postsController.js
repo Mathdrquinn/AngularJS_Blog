@@ -1,4 +1,4 @@
-angular.module("tiy-ng-modules.controllers")
+angular.module("blog-modules")
 
   .controller("postsController", function ($scope) {
     $scope.posts = [
