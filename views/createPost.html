@@ -7,9 +7,9 @@
   <label for="box"> Content
     <textarea name="box" rows="10" cols="60" value="Begin..." ng-model="newb.content">Begin Typing...</textarea>
   </label>
-  <button ng-click= "poop = !poop">Preview</button>
   <input type="submit">
 </form>
+  <button class="button alert" ng-click= "poop = !poop" ng-hide="poop">Preview</button>
 
 <div id="preview" ng-hide="!poop">
   <span><a href="">{{newb.title}}</a></span> by <span style="color: darkgrey">{{newb.author}}</span>
